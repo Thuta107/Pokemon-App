@@ -2,9 +2,9 @@
   "name": "Pokemon-App",
   "version": "1.0.0",
   "description": "",
-  "main": "./pokemon-server/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node pokemon-server index",
+    "start": "node index.js",
     "dev": "nodemon pokemon-server index"
   },
   "keywords": [],

@@ -4,17 +4,18 @@ const path = require('path')
 const app = express();
 // const team = require('./routes/team');
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 4000
 
 // Recognize Request Object as JSON & Array/String
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 // app.use('/team', team)
-app.use(express.static(path.join(__dirname, '..', 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  console.log
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(PORT, error => {
